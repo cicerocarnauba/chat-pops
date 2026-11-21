@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-section="consulta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chat-pops — Copiloto de Protocolos Operacionais Padrão (HU-UFC)</title>
+  <meta name="description" content="Copiloto institucional B2E para consulta rápida, estruturada e auditável de Procedimentos Operacionais Padrão (POPs) hospitalares.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@82..100,500..700&family=JetBrains+Mono:wght@400;500;600&family=Spectral:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <div class="binder-stage">
+    <header class="mobile-board-header" aria-label="Cabeçalho institucional">
+      <div class="mobile-brand">
+        <span class="brand-seal">HU</span>
+        <div>
+          <strong>chat-pops · HU-UFC</strong>
+          <span id="mobile-section-label">Enfermagem · Consulta</span>
+        </div>
+      </div>
+      <span class="mono-pill" id="mobile-mode-pill">SQL Ativo</span>
+    </header>
+
+    <div class="acetate-leaf" id="conteudo-principal">
+      <div class="punch-rail" aria-hidden="true">
+        <span class="punch-hole"></span>
+        <span class="punch-hole"></span>
+        <span class="punch-hole"></span>
+        <span class="spine-legend">CHAT-POPS · MANUAL OPERACIONAL HU-UFC · 2026</span>
+      </div>
+
+      <!-- ABA 1: CONSULTA & FOLHA NORMATIVA -->
+      <section class="leaf-view is-active" id="view-consulta" aria-labelledby="heading-consulta">
+        <div class="consulta-grid">
+          <div class="chat-column">
+            <div class="column-top">
+              <div class="title-bar">
+                <div class="desktop-title-copy">
+                  <h1 id="heading-consulta">chat-pops · HU-UFC</h1>
+                  <p class="subtitle-line">Divisória Ativa: Consulta Rastreada · Zero PII (LGPD)</p>
+                </div>
+                <button type="button" class="btn-outline-sm" id="btn-toggle-key" aria-expanded="false" aria-controls="painel-api-key">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                  <span>Motor IA</span>
+                </button>
+              </div>
+
+              <div class="key-drawer" id="painel-api-key" hidden>
+                <label for="input-gemini-key">Chave opcional Google Gemini API (sessão local)</label>
+                <div class="key-row">
+                  <input type="password" id="input-gemini-key" placeholder="AIza... (vazio usa SQL determinístico)" autocomplete="off">
+                  <button type="button" class="btn-secondary" id="btn-save-key">Aplicar</button>
+                </div>
+                <p class="helper-note" id="key-status-note">Modo atual: SQL Determinístico Offline (RNF05).</p>
+              </div>
+            </div>
+
+            <div class="chat-feed" id="chat-feed" role="log" aria-live="polite">
+              <article class="chat-turn turn-user">
+                <p>“Quais materiais separar na bandeja e passos para punção venosa periférica?”</p>
+              </article>
+              <article class="chat-turn turn-assistant">
+                <div class="turn-meta">
+                  <span class="mono-tag">SQL VERIFICADO · POP.ENF.001</span>
+                  <span class="mono-muted" id="last-latency">18ms</span>
+                </div>
+                <p id="assistant-summary">Protocolo localizado na base oficial vigente. Os itens de bandeja marcáveis, etapas numeradas e alertas da CCIH estão abertos na folha ao lado.</p>
+              </article>
+            </div>
+
+            <div class="quick-index" aria-label="Atalhos rápidos de protocolos">
+              <div class="quick-header">
+                <h2>Índice Rápido no Plantão</h2>
+                <span class="mono-muted">Base [DEMO]</span>
+              </div>
+              <div class="quick-list" id="quick-pop-list"></div>
+            </div>
+
+            <form class="query-form" id="form-chat" novalidate>
+              <label for="input-pergunta" class="sr-only">Consultar procedimento ou código POP</label>
+              <input
+                type="text"
+                id="input-pergunta"
+                name="pergunta"
+                placeholder="Buscar POP (ex.: ENF.003)"
+                required
+              >
+              <button type="submit" class="btn-primary" id="btn-enviar-chat">
+                <span id="btn-enviar-label">Abrir Folha</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </form>
+          </div>
+
+          <div class="protocol-column" id="protocol-sheet">
+            <div class="spec-header">
+              <div class="spec-title-group">
+                <h2 id="spec-titulo">Punção Venosa Periférica com Cateter Sobre Agulha</h2>
+                <p class="spec-sub" id="spec-sub">Divisão de Enfermagem · Versão v3.2 - 2026 [DEMO] · Base Relacional Oficial</p>
+              </div>
+              <div class="spec-badges">
+                <span class="code-stamp" id="spec-codigo">POP.ENF.001</span>
+                <span class="status-stamp is-active" id="spec-status">ATIVO</span>
+              </div>
+            </div>
+
+            <p class="spec-objective" id="spec-objetivo">
+              Padronizar a instalação e estabilização de acesso venoso periférico seguro para terapia infusional em pacientes adultos, prevenindo flebite, infiltração e acidentes com perfurocortantes.
+            </p>
+
+            <div class="bilateral-sheet" id="spec-bilateral">
+              <div class="sheet-section">
+                <div class="section-bar">
+                  <h3>Bandeja Conferida</h3>
+                  <span class="mono-counter" id="tray-progress">0/6 marcados</span>
+                </div>
+                <ul class="punch-checklist" id="spec-materiais"></ul>
+              </div>
+
+              <div class="sheet-section">
+                <div class="section-bar">
+                  <h3>Passos de Execução</h3>
+                  <button type="button" class="btn-ghost-xs" id="btn-reset-tray">Limpar marcações</button>
+                </div>
+                <ol class="steps-prose" id="spec-passos"></ol>
+              </div>
+            </div>
+
+            <div class="vermilion-slip" id="spec-alertas-box" role="region" aria-label="Pontos críticos de biossegurança">
+              <div class="slip-header">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+                <h3>Tarja de Biossegurança e Pontos Críticos (CCIH)</h3>
+              </div>
+              <ul class="slip-list" id="spec-alertas"></ul>
+            </div>
+
+            <!-- Estado de Recusa Segura / Lacuna -->
+            <div class="gap-refusal-sheet" id="gap-refusal-sheet" hidden>
+              <div class="vermilion-slip">
+                <div class="slip-header">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6m0-6l-6 6"/></svg>
+                  <h3>Recusa Segura — Protocolo Ausente ou Suspenso (RN01 / RN02)</h3>
+                </div>
+                <p id="gap-refusal-text"></p>
+              </div>
+              <div class="gap-ticket">
+                <h3>Comprovante de Demanda Registrada para a CCIH</h3>
+                <div class="ticket-grid">
+                  <div>
+                    <span>Termo Normalizado</span>
+                    <strong id="gap-term-value">—</strong>
+                  </div>
+                  <div>
+                    <span>Solicitações Acumuladas</span>
+                    <strong id="gap-count-value">1</strong>
+                  </div>
+                </div>
+                <div class="ticket-actions">
+                  <button type="button" class="btn-primary" id="btn-create-from-gap">
+                    <span>Cadastrar este POP no Fichário</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  </button>
+                  <button type="button" class="btn-secondary" id="btn-view-gaps-from-refusal">Ver Fila da CCIH</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABA 2: CATÁLOGO COMPLETO DE POPS -->
+      <section class="leaf-view" id="view-catalogo" aria-labelledby="heading-catalogo" hidden>
+        <div class="single-sheet">
+          <div class="sheet-top-row">
+            <div>
+              <h2 id="heading-catalogo">Catálogo Oficial de Protocolos Homologados</h2>
+              <p class="subtitle-line">Consulte folhas vigentes ou inspecione documentos retidos em revisão normativa (RN02).</p>
+            </div>
+            <button type="button" class="btn-primary" id="btn-ir-novo-pop">
+              <span>Novo / Importar POP</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+          </div>
+
+          <div class="filter-bar">
+            <div class="field-inline">
+              <label for="filtro-termo">Filtrar por código, título ou insumo</label>
+              <input type="search" id="filtro-termo" placeholder="Ex.: POP.ENF.003, clorexidina, curativo">
+            </div>
+            <div class="field-inline">
+              <label for="filtro-setor">Comissão / Setor</label>
+              <select id="filtro-setor">
+                <option value="">Todos os setores</option>
+                <option value="Enfermagem">Divisão de Enfermagem</option>
+                <option value="CCIH">CCIH</option>
+                <option value="Farmácia">Farmácia Clínica</option>
+                <option value="Pele">Comissão de Pele</option>
+                <option value="Oncologia">Unidade de Oncologia</option>
+              </select>
+            </div>
+            <label class="toggle-check" for="filtro-inativos">
+              <input type="checkbox" id="filtro-inativos" checked>
+              <span>Mostrar suspensos (EM_REVISAO)</span>
+            </label>
+          </div>
+
+          <div class="catalog-grid" id="catalog-grid"></div>
+        </div>
+      </section>
+
+      <!-- ABA 3: CADASTRAR / IMPORTAR NOVO POP -->
+      <section class="leaf-view" id="view-importar" aria-labelledby="heading-importar" hidden>
+        <div class="single-sheet">
+          <div class="sheet-top-row">
+            <div>
+              <h2 id="heading-importar">Cadastrar ou Importar Folha de Protocolo (RF05)</h2>
+              <p class="subtitle-line">Importe um arquivo estruturado dos supervisores (.json, .md ou .txt) ou preencha os campos normativos EBSERH/HU.</p>
+            </div>
+            <label class="btn-secondary upload-trigger" for="input-arquivo-pop">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+              <span>Carregar Arquivo (.md / .txt / .json)</span>
+              <input type="file" id="input-arquivo-pop" accept=".json,.md,.txt" hidden>
+            </label>
+          </div>
+
+          <div class="feedback-banner" id="form-pop-feedback" hidden role="status"></div>
+
+          <form class="pop-form" id="form-novo-pop">
+            <div class="form-row-4">
+              <div class="field-group">
+                <label for="pop-codigo">Código Oficial *</label>
+                <input type="text" id="pop-codigo" name="codigo" placeholder="POP.ENF.007" required>
+              </div>
+              <div class="field-group">
+                <label for="pop-setor">Setor / Comissão *</label>
+                <input type="text" id="pop-setor" name="setor" placeholder="Divisão de Enfermagem" required>
+              </div>
+              <div class="field-group">
+                <label for="pop-versao">Versão e Ano *</label>
+                <input type="text" id="pop-versao" name="versao" placeholder="v1.0 - 2026" required>
+              </div>
+              <div class="field-group">
+                <label for="pop-status">Status Normativo *</label>
+                <select id="pop-status" name="status">
+                  <option value="ATIVO">ATIVO (Homologado)</option>
+                  <option value="EM_REVISAO">EM_REVISAO (Retido)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="field-group">
+                <label for="pop-titulo">Título Oficial do Procedimento *</label>
+                <input type="text" id="pop-titulo" name="titulo" placeholder="Ex.: Coleta de Hemocultura Pareada Periférica" required>
+              </div>
+              <div class="field-group">
+                <label for="pop-chaves">Palavras-chave de Busca SQL *</label>
+                <input type="text" id="pop-chaves" name="palavras_chave" placeholder="hemocultura, sepse, frasco aerobio, febre" required>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="pop-objetivo">Objetivo Assistencial *</label>
+              <textarea id="pop-objetivo" name="objetivo" rows="2" placeholder="Finalidade clínica e escopo de aplicação na assistência..." required></textarea>
+            </div>
+
+            <div class="form-row-3">
+              <div class="field-group">
+                <label for="pop-materiais">Materiais de Bandeja (1 por linha) *</label>
+                <textarea id="pop-materiais" name="materiais" rows="5" placeholder="Luvas estéreis&#10;Clorexidina alcoólica 0,5%&#10;2 pares de frascos de hemocultura..." required></textarea>
+              </div>
+              <div class="field-group">
+                <label for="pop-passos">Passos de Execução (numerados, 1 por linha) *</label>
+                <textarea id="pop-passos" name="passos_execucao" rows="5" placeholder="1. Higienizar as mãos e identificar os frascos...&#10;2. Desinfetar a borracha do frasco com álcool 70%..." required></textarea>
+              </div>
+              <div class="field-group">
+                <label for="pop-alertas">Alertas de Biossegurança CCIH (1 por linha) *</label>
+                <textarea id="pop-alertas" name="alertas_seguranca" rows="5" placeholder="Coletar preferencialmente antes do início da antimicrobianoterapia..." required></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-secondary" id="btn-preencher-exemplo">Preencher Exemplo Realista (Hemocultura)</button>
+              <button type="submit" class="btn-primary" id="btn-salvar-pop">
+                <span id="btn-salvar-pop-label">Homologar e Gravar no SQL</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- ABA 4: PAINEL GERENCIAL CCIH & AUDITORIA SQL ( PAUTADO DIRETO NA FOLHA ) -->
+      <section class="leaf-view" id="view-lacunas" aria-labelledby="heading-lacunas" hidden>
+        <div class="single-sheet">
+          <div class="sheet-top-row">
+            <div>
+              <h2 id="heading-lacunas">Livro de Controle da CCIH — Cobertura, Acessos e Lacunas (RF04)</h2>
+              <p class="subtitle-line">Indicadores operacionais da base relacional (inclui registros iniciais [DEMO] até substituição em produção).</p>
+            </div>
+            <button type="button" class="btn-secondary" id="btn-atualizar-analytics">Atualizar Registro SQL</button>
+          </div>
+
+          <div class="ruled-telemetry-bar" role="region" aria-label="Resumo operacional">
+            <div class="telemetry-col">
+              <span>Taxa de Cobertura Real</span>
+              <strong id="kpi-cobertura">62.5%</strong>
+            </div>
+            <div class="telemetry-col">
+              <span>Consultas Auditadas</span>
+              <strong id="kpi-consultas">8</strong>
+            </div>
+            <div class="telemetry-col">
+              <span>Folhas Vigentes / Em Revisão</span>
+              <strong id="kpi-ativos">5 / 1</strong>
+            </div>
+            <div class="telemetry-col">
+              <span>Latência Média SQL</span>
+              <strong id="kpi-latencia">16ms</strong>
+            </div>
+          </div>
+
+          <div class="ledger-split-top">
+            <div class="ruled-section">
+              <h3>Fila Prioritária de Lacunas Demandadas (CCIH)</h3>
+              <table class="binder-table" aria-label="Ranking de lacunas de protocolo">
+                <thead>
+                  <tr>
+                    <th>Procedimento Sem Cobertura</th>
+                    <th>Frequência</th>
+                    <th>Ação</th>
+                  </tr>
+                </thead>
+                <tbody id="tabela-lacunas"></tbody>
+              </table>
+            </div>
+
+            <div class="ruled-section">
+              <h3>Protocolos Mais Consultados no Plantão</h3>
+              <table class="binder-table" aria-label="Protocolos mais acessados">
+                <thead>
+                  <tr>
+                    <th>Código e Procedimento</th>
+                    <th>Setor</th>
+                    <th>Acessos</th>
+                  </tr>
+                </thead>
+                <tbody id="tabela-mais-buscados"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="ruled-section">
+            <h3>Trilha Recente de Auditoria de Consultas (Zero PII · LGPD)</h3>
+            <table class="binder-table" aria-label="Histórico recente de consultas">
+              <thead>
+                <tr>
+                  <th>Pergunta Registrada no Turno</th>
+                  <th>Desfecho SQL</th>
+                  <th>Latência</th>
+                </tr>
+              </thead>
+              <tbody id="tabela-logs"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PILHA ESCALONADA DE DIVISÓRIAS NA BORDA DIREITA (DESKTOP) / FAIXA SUPERIOR (MOBILE) -->
+    <nav class="fore-edge-tabs" aria-label="Divisórias do fichário">
+      <button type="button" class="fore-tab is-active" data-target="consulta" data-board="#0D6B63" data-label="Enfermagem · Consulta">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>ENFERMAGEM</span>
+      </button>
+      <button type="button" class="fore-tab" data-target="catalogo" data-board="#2F6B3B" data-label="Catálogo Vigente">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>CATÁLOGO (<em id="tab-count-pops">5</em>)</span>
+      </button>
+      <button type="button" class="fore-tab" data-target="importar" data-board="#1E4B94" data-label="Importar / Novo POP">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15h6"/></svg>
+        <span>IMPORTAR POP</span>
+      </button>
+      <button type="button" class="fore-tab" data-target="lacunas" data-board="#A84311" data-label="CCIH · Lacunas e Auditoria">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        <span>CCIH · LACUNAS (<em id="tab-count-gaps">3</em>)</span>
+      </button>
+    </nav>
+  </div>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
