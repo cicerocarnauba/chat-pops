@@ -1,0 +1,11 @@
+# Python & Ambiente
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Banco SQLite local (recriado automaticamente com seed [DEMO])
+data/*.db
+
+# Impeccable local machine override (manter artefatos compartilhados versionados)
+.impeccable/config.local.json
