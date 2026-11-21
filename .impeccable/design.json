@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-21T17:15:00Z",
+  "title": "Design System: chat-pops",
+  "extensions": {
+    "colorMeta": {
+      "board-teal": {
+        "role": "primary",
+        "displayName": "Verde-Petróleo Enfermagem",
+        "canonical": "#0D6B63",
+        "tonalRamp": ["#052926", "#083D38", "#0B524C", "#0D6B63", "#1F8A80", "#4EB0A6", "#96D6CF", "#E3F5F3"]
+      },
+      "ink-verified": {
+        "role": "primary",
+        "displayName": "Verde-Tinta Auditado",
+        "canonical": "#0B5852",
+        "tonalRamp": ["#042421", "#073632", "#0B5852", "#14756D", "#2E948B", "#62B8B0", "#A5DCD7", "#E6F6F4"]
+      },
+      "board-grass": {
+        "role": "secondary",
+        "displayName": "Verde-Folha Catálogo",
+        "canonical": "#2F6B3B",
+        "tonalRamp": ["#112916", "#1C4024", "#2F6B3B", "#3E874D", "#5BA66A", "#88C494", "#BCE0C3", "#EAF6EC"]
+      },
+      "board-ultramarine": {
+        "role": "secondary",
+        "displayName": "Azul-Ultramar Normativo",
+        "canonical": "#1E4B94",
+        "tonalRamp": ["#0B1D3B", "#133163", "#1E4B94", "#2B64BD", "#4D83D6", "#80A9E8", "#B8D0F5", "#EBF2FC"]
+      },
+      "board-oxide": {
+        "role": "secondary",
+        "displayName": "Óxido-Terracota CCIH",
+        "canonical": "#A84311",
+        "tonalRamp": ["#3D1705", "#692809", "#A84311", "#CC5921", "#E07D4C", "#EDA582", "#F6CEBA", "#FDF0EA"]
+      },
+      "vermilion-alert": {
+        "role": "tertiary",
+        "displayName": "Vermelhão de Biossegurança",
+        "canonical": "#B92525",
+        "tonalRamp": ["#420B0B", "#731515", "#B92525", "#D63E3E", "#E66A6A", "#F09C9C", "#F8CECE", "#FDF2F2"]
+      },
+      "vermilion-soft": {
+        "role": "tertiary",
+        "displayName": "Fundo Rosado de Alerta",
+        "canonical": "#FDF2F2",
+        "tonalRamp": ["#420B0B", "#731515", "#9E1F1F", "#C93B3B", "#E37474", "#F2AAAA", "#F9D6D6", "#FDF2F2"]
+      },
+      "vermilion-ink": {
+        "role": "tertiary",
+        "displayName": "Tinta Carmim Escura",
+        "canonical": "#6E1414",
+        "tonalRamp": ["#360808", "#520E0E", "#6E1414", "#962121", "#BD3E3E", "#DB7474", "#EFAFAF", "#FCEBEB"]
+      },
+      "status-active-bg": {
+        "role": "secondary",
+        "displayName": "Verde-Água de Homologação",
+        "canonical": "#DCF2E4",
+        "tonalRamp": ["#0E381E", "#14532D", "#1E7540", "#32995A", "#5CBA80", "#91D4AB", "#BCE6CC", "#DCF2E4"]
+      },
+      "status-active-ink": {
+        "role": "secondary",
+        "displayName": "Tinta Floresta de Homologação",
+        "canonical": "#14532D",
+        "tonalRamp": ["#0A2916", "#14532D", "#1D703E", "#2D8F54", "#52B077", "#85CCA1", "#BBE5CC", "#E8F7EE"]
+      },
+      "milk-acetate": {
+        "role": "neutral",
+        "displayName": "Acetato Leitoso Fosco",
+        "canonical": "rgba(246, 244, 236, 0.95)",
+        "tonalRamp": ["#262520", "#45433B", "#6B685C", "#949082", "#BDB9AA", "#DDD9CA", "#EAE6D9", "#F6F4EC"]
+      },
+      "leaf-solid": {
+        "role": "neutral",
+        "displayName": "Papel Leitoso Sólido",
+        "canonical": "#F6F4EC",
+        "tonalRamp": ["#262520", "#45433B", "#6B685C", "#949082", "#BDB9AA", "#DDD9CA", "#EAE6D9", "#F6F4EC"]
+      },
+      "leaf-inset": {
+        "role": "neutral",
+        "displayName": "Papel Marfim de Controle",
+        "canonical": "#FBF9F4",
+        "tonalRamp": ["#292823", "#4A4840", "#706D62", "#999588", "#C4C0B2", "#E3DFD3", "#F2EFE6", "#FBF9F4"]
+      },
+      "leaf-recessed": {
+        "role": "neutral",
+        "displayName": "Cartolina Rebaixada",
+        "canonical": "#EAE6D9",
+        "tonalRamp": ["#24231E", "#424037", "#666356", "#8F8B7B", "#B5B09F", "#D4CFC0", "#EAE6D9", "#F5F3EC"]
+      },
+      "board-stack-backing": {
+        "role": "neutral",
+        "displayName": "Cartão Suporte do Fichário",
+        "canonical": "#DFDBC9",
+        "tonalRamp": ["#24221C", "#423F35", "#666253", "#8C8775", "#B3AE9B", "#CEC9B6", "#DFDBC9", "#F2EFE6"]
+      },
+      "rule-hairline": {
+        "role": "neutral",
+        "displayName": "Fio Pautado de Manual",
+        "canonical": "#C7C2B4",
+        "tonalRamp": ["#21201C", "#3D3B34", "#5E5B51", "#858174", "#A8A395", "#C7C2B4", "#E0DCD0", "#F4F2EC"]
+      },
+      "field-stroke": {
+        "role": "neutral",
+        "displayName": "Traço Pedra de Formulário",
+        "canonical": "#9E998A",
+        "tonalRamp": ["#1F1E1B", "#3B3933", "#59564D", "#7A766A", "#9E998A", "#BFB9AA", "#DCD8CC", "#F3F1EB"]
+      },
+      "ink-primary": {
+        "role": "neutral",
+        "displayName": "Tinta Preta de Impressão",
+        "canonical": "#181B1A",
+        "tonalRamp": ["#181B1A", "#2B302E", "#434A47", "#5E6663", "#7F8784", "#A5ADA9", "#CCD1CF", "#EEF0EF"]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Grafite Mineral Secundário",
+        "canonical": "#3A423F",
+        "tonalRamp": ["#1A1E1C", "#2A302E", "#3A423F", "#545E5A", "#737F7A", "#9BA6A1", "#C5CCC9", "#ECEFED"]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Cinza-Ardósia Técnico",
+        "canonical": "#505A56",
+        "tonalRamp": ["#1C201E", "#333A37", "#505A56", "#6B7873", "#8B9692", "#B0B8B5", "#D3D8D6", "#F0F2F1"]
+      },
+      "paper-white": {
+        "role": "neutral",
+        "displayName": "Branco Puro de Contraste",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#222423", "#404342", "#636765", "#8A8E8C", "#B2B5B4", "#D6D8D7", "#F0F1F0", "#FFFFFF"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Normativo Condensado",
+        "purpose": "Títulos principais de protocolos abertos e cabeçalhos de divisórias internas."
+      },
+      "headline": {
+        "displayName": "Cabeçalho Institucional do Posto",
+        "purpose": "Identificação institucional na barra superior da coluna de consulta."
+      },
+      "title": {
+        "displayName": "Título de Seção e Cartão",
+        "purpose": "Cabeçalhos de cartões de catálogo, seções pautadas da CCIH e colunas bilaterais."
+      },
+      "body": {
+        "displayName": "Corpo Operacional de Interface",
+        "purpose": "Turnos de diálogo, controles de formulário e itens interativos da bandeja."
+      },
+      "body-reading": {
+        "displayName": "Prosa Clínica Homologada",
+        "purpose": "Leitura serena de objetivos assistenciais (máx. 74ch) e passos numerados de execução (máx. 68ch)."
+      },
+      "label": {
+        "displayName": "Rótulo Condensado de Divisória",
+        "purpose": "Abas verticais escalonadas na margem direita e rótulos diretos de formulário."
+      },
+      "mono": {
+        "displayName": "Código e Telemetria Tabular",
+        "purpose": "Códigos oficiais de POP, carimbos de status, índices de etapa, contadores e latência SQL."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-leaf",
+        "value": "0 12px 28px -8px rgba(18, 24, 23, 0.30), 0 3px 7px rgba(18, 24, 23, 0.16)",
+        "purpose": "Elevação estrutural única da folha de acetato leitoso sobre a prancha divisória rígida."
+      },
+      {
+        "name": "shadow-hole",
+        "value": "inset 0 2px 5px rgba(0, 0, 0, 0.42)",
+        "purpose": "Profundidade interna de recorte físico nos furos de encadernação e nos discos marcados da bandeja."
+      }
+    ],
+    "motion": [
+      {
+        "name": "step-snap",
+        "value": "90ms steps(2)",
+        "purpose": "Chaveamento mecânico seco para troca de prancha divisória, estados hover/selected e perfuração de itens."
+      },
+      {
+        "name": "binder-settle",
+        "value": "260ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Assentamento inicial único da folha de acetato e seu blur no carregamento da página."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "smartphone",
+        "value": "767px"
+      },
+      {
+        "name": "tablet",
+        "value": "1160px"
+      },
+      {
+        "name": "desktop-stage",
+        "value": "1440px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão Primário da Prancha Ativa",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação principal acoplada à cor da prancha divisória ativa, com altura mínima de 44px e chaveamento seco.",
+      "html": "<button type=\"button\" class=\"ds-btn-primary\"><span>Abrir Folha</span><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn-primary { min-height: 44px; padding: 0 15px; font-family: var(--font-ui, 'Archivo', sans-serif); font-size: 0.875rem; font-weight: 600; font-variation-settings: 'wdth' 90; background: var(--board-color, #0D6B63); color: #FFFFFF; border: 1px solid var(--ink-primary, #181B1A); border-radius: var(--radius-sm, 4px); display: inline-flex; align-items: center; justify-content: center; gap: 7px; cursor: pointer; transition: background-color var(--step-snap, 90ms steps(2)), color var(--step-snap, 90ms steps(2)); } .ds-btn-primary:hover { background: var(--ink-primary, #181B1A); } .ds-btn-primary:focus-visible { outline: 2px solid var(--ink-primary, #181B1A); outline-offset: 2px; } .ds-btn-primary:active { background: var(--ink-primary, #181B1A); }"
+    },
+    {
+      "name": "Botão Secundário de Folha",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ação complementar sobre superfície marfim clara com contorno de tinta preta e inversão seca no hover.",
+      "html": "<button type=\"button\" class=\"ds-btn-secondary\">Atualizar Registro SQL</button>",
+      "css": ".ds-btn-secondary { min-height: 44px; padding: 0 15px; font-family: var(--font-ui, 'Archivo', sans-serif); font-size: 0.875rem; font-weight: 600; font-variation-settings: 'wdth' 90; background: var(--leaf-inset, #FBF9F4); color: var(--ink-primary, #181B1A); border: 1px solid var(--ink-primary, #181B1A); border-radius: var(--radius-sm, 4px); display: inline-flex; align-items: center; justify-content: center; gap: 7px; cursor: pointer; transition: background-color var(--step-snap, 90ms steps(2)), color var(--step-snap, 90ms steps(2)); } .ds-btn-secondary:hover { background: var(--ink-primary, #181B1A); color: #FFFFFF; } .ds-btn-secondary:focus-visible { outline: 2px solid var(--ink-primary, #181B1A); outline-offset: 2px; }"
+    },
+    {
+      "name": "Botão Contornado Compacto",
+      "kind": "button",
+      "refersTo": "button-outline-sm",
+      "description": "Gatilho utilitário para cabeçalhos, cartões de catálogo e linhas de tabela mantendo alvo mínimo de 44px.",
+      "html": "<button type=\"button\" class=\"ds-btn-outline-sm\"><span>Criar POP</span><svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn-outline-sm { min-height: 44px; padding: 0 12px; font-family: var(--font-ui, 'Archivo', sans-serif); font-size: 0.8125rem; font-weight: 600; font-variation-settings: 'wdth' 90; background: var(--leaf-inset, #FBF9F4); color: var(--ink-primary, #181B1A); border: 1px solid #9E998A; border-radius: var(--radius-sm, 4px); display: inline-flex; align-items: center; gap: 7px; cursor: pointer; transition: border-color var(--step-snap, 90ms steps(2)), background-color var(--step-snap, 90ms steps(2)); } .ds-btn-outline-sm:hover { border-color: var(--ink-primary, #181B1A); background: #FFFFFF; } .ds-btn-outline-sm:focus-visible { outline: 2px solid var(--ink-primary, #181B1A); outline-offset: 2px; }"
+    },
+    {
+      "name": "Barra Composta de Consulta de POP",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Moldura normativa de 1.5px em tinta preta combinando campo de busca sem ruído e ação imediata.",
+      "html": "<form class=\"ds-query-form\" onsubmit=\"return false;\"><input class=\"ds-query-input\" type=\"text\" placeholder=\"Buscar POP (ex.: ENF.003)\" aria-label=\"Consultar procedimento ou código POP\"><button type=\"submit\" class=\"ds-query-submit\"><span>Abrir Folha</span><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button></form>",
+      "css": ".ds-query-form { display: flex; gap: 6px; padding: 5px; background: var(--leaf-inset, #FBF9F4); border: 1.5px solid var(--ink-primary, #181B1A); border-radius: var(--radius-md, 8px); max-width: 400px; } .ds-query-input { flex: 1; min-width: 0; min-height: 44px; border: none; background: transparent; padding: 0 8px; font-family: var(--font-ui, 'Archivo', sans-serif); font-size: 0.875rem; color: var(--ink-primary, #181B1A); } .ds-query-input:focus { outline: none; background: #FFFFFF; border-radius: var(--radius-sm, 4px); } .ds-query-form:focus-within { outline: 2px solid var(--ink-primary, #181B1A); outline-offset: 2px; } .ds-query-submit { min-height: 44px; padding: 0 15px; font-family: var(--font-ui, 'Archivo', sans-serif); font-size: 0.875rem; font-weight: 600; font-variation-settings: 'wdth' 90; background: var(--board-color, #0D6B63); color: #FFFFFF; border: 1px solid var(--ink-primary, #181B1A); border-radius: var(--radius-sm, 4px); display: inline-flex; align-items: center; gap: 7px; cursor: pointer; transition: background-color var(--step-snap, 90ms steps(2)); } .ds-query-submit:hover { background: var(--ink-primary, #181B1A); }"
+    },
+    {
+      "name": "Carimbos de Código Oficial e Status",
+      "kind": "chip",
+      "refersTo": "code-stamp",
+      "description": "Par de carimbos monoespaçados tabulares para identificação rastreável de código e vigência normativa.",
+      "html": "<div class=\"ds-stamp-pair\"><span class=\"ds-code-stamp\">POP.ENF.001</span><span class=\"ds-status-stamp\">ATIVO</span></div>",
+      "css": ".ds-stamp-pair { display: inline-flex; align-items: center; gap: 8px; } .ds-code-stamp { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.8125rem; font-weight: 600; font-variant-numeric: tabular-nums; background: var(--ink-primary, #181B1A); color: #FFFFFF; padding: 5px 10px; border-radius: var(--radius-sm, 4px); } .ds-status-stamp { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.75rem; font-weight: 600; padding: 5px 9px; border-radius: var(--radius-sm, 4px); background: var(--status-active-bg, #DCF2E4); color: var(--status-active-ink, #14532D); border: 1px solid currentColor; }"
+    },
+    {
+      "name": "Cartão Pautado de Protocolo no Catálogo",
+      "kind": "card",
+      "refersTo": "pop-card",
+      "description": "Ficha plana em papel marfim sem sombra externa, com carimbos normativos no topo e abertura direta.",
+      "html": "<article class=\"ds-pop-card\" tabindex=\"0\"><div class=\"ds-pop-card-top\"><span class=\"ds-card-code\">POP.ENF.001</span><span class=\"ds-card-status\">ATIVO</span></div><h3 class=\"ds-card-title\">Punção Venosa Periférica com Cateter Sobre Agulha</h3><p class=\"ds-card-desc\">Padronizar a instalação e estabilização de acesso venoso periférico seguro em pacientes adultos.</p><div class=\"ds-pop-card-foot\"><span>Divisão de Enfermagem · v3.2 - 2026</span></div></article>",
+      "css": ".ds-pop-card { background: var(--leaf-inset, #FBF9F4); border: 1px solid var(--rule-hairline, #C7C2B4); border-radius: var(--radius-sm, 4px); padding: 16px; display: flex; flex-direction: column; gap: 9px; max-width: 360px; color: var(--ink-primary, #181B1A); font-family: var(--font-ui, 'Archivo', sans-serif); transition: border-color var(--step-snap, 90ms steps(2)); } .ds-pop-card:hover, .ds-pop-card:focus-visible { border-color: var(--ink-primary, #181B1A); outline: none; } .ds-pop-card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; } .ds-card-code { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.8125rem; font-weight: 600; background: var(--ink-primary, #181B1A); color: #FFFFFF; padding: 4px 9px; border-radius: var(--radius-sm, 4px); } .ds-card-status { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.75rem; font-weight: 600; background: var(--status-active-bg, #DCF2E4); color: var(--status-active-ink, #14532D); border: 1px solid currentColor; padding: 4px 8px; border-radius: var(--radius-sm, 4px); } .ds-card-title { font-size: 1.0625rem; font-weight: 700; line-height: 1.28; font-variation-settings: 'wdth' 86; margin: 0; } .ds-card-desc { font-size: 0.875rem; color: var(--ink-secondary, #3A423F); line-height: 1.45; margin: 0; } .ds-pop-card-foot { padding-top: 9px; border-top: 1px solid var(--rule-hairline, #C7C2B4); font-size: 0.8125rem; color: var(--ink-secondary, #3A423F); }"
+    },
+    {
+      "name": "Pilha de Divisórias de Borda do Fichário",
+      "kind": "nav",
+      "refersTo": "fore-tab",
+      "description": "Abas verticais escalonadas contínuas por comissão; a aba ativa alarga para 58px e funde-se à prancha.",
+      "html": "<nav class=\"ds-fore-tabs\" aria-label=\"Divisórias\"><button type=\"button\" class=\"ds-fore-tab ds-is-active ds-teal\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" aria-hidden=\"true\"><path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"/></svg><span>ENFERMAGEM</span></button><button type=\"button\" class=\"ds-fore-tab ds-grass\"><span>CATÁLOGO (<em>5</em>)</span></button><button type=\"button\" class=\"ds-fore-tab ds-oxide\"><span>CCIH (<em>3</em>)</span></button></nav>",
+      "css": ".ds-fore-tabs { background: var(--board-stack-backing, #DFDBC9); border: 1px solid rgba(24, 27, 26, 0.42); border-left: none; border-radius: 0 10px 10px 0; padding: 8px 6px 8px 0; display: inline-flex; flex-direction: column; } .ds-fore-tab { min-height: 112px; width: 52px; border: 1px solid rgba(24, 27, 26, 0.45); border-left: none; border-radius: 0 8px 8px 0; color: #FFFFFF; font-family: var(--font-ui, 'Archivo', sans-serif); font-size: 0.75rem; font-weight: 700; font-variation-settings: 'wdth' 86; letter-spacing: 0.06em; writing-mode: vertical-rl; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; padding: 12px 10px; margin-top: -1px; transition: width var(--step-snap, 90ms steps(2)); } .ds-fore-tab:first-child { margin-top: 0; } .ds-fore-tab em { font-style: normal; font-family: var(--font-mono, 'JetBrains Mono', monospace); } .ds-teal { background: var(--board-teal, #0D6B63); } .ds-grass { background: var(--board-grass, #2F6B3B); } .ds-oxide { background: var(--board-oxide, #A84311); } .ds-fore-tab:hover { width: 56px; } .ds-fore-tab:focus-visible { outline: 2px solid var(--ink-primary, #181B1A); outline-offset: -2px; } .ds-fore-tab.ds-is-active { width: 58px; border-right-color: transparent; }"
+    },
+    {
+      "name": "Item de Bandeja com Círculo Perfurado",
+      "kind": "custom",
+      "refersTo": "punch-item",
+      "description": "Checklist tátil de conferência de materiais cujo disco vazado revela a cor da prancha ativa quando marcado.",
+      "html": "<div class=\"ds-punch-demo\"><button type=\"button\" class=\"ds-punch-btn\" aria-pressed=\"false\"><span class=\"ds-die-circle\" aria-hidden=\"true\"></span><span>Clorexidina alcoólica 0,5% e gaze estéril</span></button><button type=\"button\" class=\"ds-punch-btn ds-is-punched\" aria-pressed=\"true\"><span class=\"ds-die-circle\" aria-hidden=\"true\"></span><span>Cateter periférico sobre agulha 20G / 22G</span></button></div>",
+      "css": ".ds-punch-demo { display: flex; flex-direction: column; gap: 5px; max-width: 360px; } .ds-punch-btn { width: 100%; min-height: 44px; background: var(--leaf-inset, #FBF9F4); border: 1px solid var(--rule-hairline, #C7C2B4); border-radius: var(--radius-sm, 4px); padding: 6px 11px; display: flex; align-items: center; gap: 10px; text-align: left; font-family: var(--font-ui, 'Archivo', sans-serif); font-size: 0.875rem; line-height: 1.32; color: var(--ink-primary, #181B1A); cursor: pointer; transition: border-color var(--step-snap, 90ms steps(2)), background-color var(--step-snap, 90ms steps(2)); } .ds-punch-btn:hover { border-color: var(--ink-primary, #181B1A); } .ds-punch-btn:focus-visible { outline: 2px solid var(--ink-primary, #181B1A); outline-offset: 2px; } .ds-die-circle { width: 17px; height: 17px; border-radius: 50%; border: 1.5px solid var(--ink-secondary, #3A423F); background: #FFFFFF; flex-shrink: 0; } .ds-punch-btn.ds-is-punched { background: var(--leaf-recessed, #EAE6D9); color: var(--ink-secondary, #3A423F); } .ds-punch-btn.ds-is-punched .ds-die-circle { background: var(--board-color, #0D6B63); border-color: rgba(24, 27, 26, 0.55); box-shadow: var(--shadow-hole, inset 0 2px 5px rgba(0, 0, 0, 0.42)); }"
+    },
+    {
+      "name": "Tarja Vermelhão de Biossegurança (CCIH)",
+      "kind": "custom",
+      "refersTo": "vermilion-slip",
+      "description": "Faixa crítica exclusiva para pontos de biossegurança da CCIH e recusas seguras, sempre visível acima da dobra.",
+      "html": "<section class=\"ds-vermilion-slip\" aria-label=\"Pontos críticos de biossegurança\"><div class=\"ds-slip-header\"><svg viewBox=\"0 0 24 24\" width=\"17\" height=\"17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" aria-hidden=\"true\"><path d=\"M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\"/></svg><h3 class=\"ds-slip-title\">Tarja de Biossegurança e Pontos Críticos (CCIH)</h3></div><ul class=\"ds-slip-list\"><li>Nunca reencapar agulhas; acionar dispositivo de segurança imediatamente.</li><li>Limitar a no máximo 2 tentativas de punção por profissional.</li></ul></section>",
+      "css": ".ds-vermilion-slip { background: var(--vermilion-alert, #B92525); color: #FFFFFF; padding: 11px 15px; border-radius: var(--radius-md, 8px); border: 1px solid #7F1616; font-family: var(--font-ui, 'Archivo', sans-serif); } .ds-slip-header { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; } .ds-slip-title { font-size: 0.9375rem; font-weight: 700; font-variation-settings: 'wdth' 86; letter-spacing: 0.01em; margin: 0; } .ds-slip-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 5px 18px; font-size: 0.8125rem; line-height: 1.36; margin: 0; padding: 0; } .ds-slip-list li { padding-left: 12px; position: relative; } .ds-slip-list li::before { content: ''; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: #FFE4E6; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Fichário Cirúrgico de Acetato Leitoso",
+    "overview": "O `chat-pops` traduz o fichário físico de Procedimentos Operacionais Padrão (POPs) do posto de enfermagem para um instrumento digital seco, rastreável e imediato. Uma folha única contínua de acetato leitoso fosco (`rgba(246, 244, 236, 0.95)`) repousa sobre uma pilha escalonada de pranchas divisórias rígidas coloridas por comissão ou função operacional na borda direita. A cor saturada pertence exclusivamente à prancha ativa no fundo do palco, aos furos de encadernação vazados que revelam essa prancha e ao botão de ação primária acoplado à seção.\n\nA densidade prioriza prontidão sob pressão de plantão hospitalar: fios de impressão de `1px` e `1.5px`, carimbos normativos em código monoespaçado tabular, conferência tátil de bandeja por círculos perfurados e leitura serena de etapas clínicas sem blocos corridos. O sistema recusa explicitamente a estética de chat SaaS corporativo cinza ou azul genérico, bolhas de conversa flutuantes com sombras difusas, gradientes decorativos e caixas de métricas aninhadas em cascata.",
+    "keyCharacteristics": [
+      "Folha contínua de acetato leitoso fosco com micro-retícula de `12px` assentada sobre prancha divisória saturada dinâmica.",
+      "Trilho esquerdo de encadernação com furos vazados de `18px` e pilha direita de 4 divisórias verticais escalonadas contínuas.",
+      "Separação tipográfica funcional entre títulos condensados (`Archivo` a `86%` de largura), leitura clínica serifada (`Spectral`) e rastreabilidade tabular (`JetBrains Mono`).",
+      "Vermelhão institucional (`#B92525`) isolado em quarentena semântica para alertas críticos de biossegurança da CCIH e recusas seguras.",
+      "Transições mecânicas secas de `90ms steps(2)` combinadas a um único assentamento inicial de `260ms` da folha no carregamento."
+    ],
+    "rules": [
+      {
+        "name": "The Active Divider Board Rule",
+        "body": "Apenas uma cor de prancha institucional ocupa o palco por vez: ao trocar de divisória, o fundo do documento, os furos vazados, o item ativo do índice e os botões primários assumem instantaneamente a cor da comissão ativa (`#0D6B63`, `#2F6B3B`, `#1E4B94` ou `#A84311`), mantendo a folha interna rigorosamente neutra.",
+        "section": "colors"
+      },
+      {
+        "name": "The Vermilion Quarantine Rule",
+        "body": "O vermelhão (`#B92525`) nunca é usado em ações destrutivas comuns, contadores decorativos ou abas de navegação; sua presença sinaliza exclusivamente risco biológico crítico da CCIH ou bloqueio normativo por ausência de protocolo vigente.",
+        "section": "colors"
+      },
+      {
+        "name": "The Condensed Spine & Serif Step Rule",
+        "body": "A condensação `\"wdth\" 86` aplica-se exclusivamente a títulos (`h1`–`h3`) e abas divisórias (e `\"wdth\" 90` em botões), nunca ao corpo corrido; inversamente, `Spectral` é restrita ao objetivo e aos passos homologados do POP, jamais aparecendo em botões, tabelas ou mensagens de sistema.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Audit Rule",
+        "body": "Todo código de protocolo, versão, contador de conferência, frequência de lacuna e medição de latência deve ser renderizado em `JetBrains Mono` com `font-variant-numeric: tabular-nums`.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tactile Die-Cut Depth Rule",
+        "body": "Nenhum componente interno à folha pode usar `box-shadow` externo: a hierarquia dentro do protocolo vem de contrastes planos de papel (`#FBF9F4` vs. `#EAE6D9`) e espessura de fio (`1px` vs. `1.5px`), reservando sombras internas aos círculos perfurados que revelam a prancha ativa.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Flush Active Tab Rule",
+        "body": "A aba divisória ativa na borda direita remove sua borda direita (`border-right-color: transparent`), zera qualquer sombra (`box-shadow: none`) e expande de `52px` para `58px`, fundindo-se no mesmo plano cromático da prancha de suporte ao fundo.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** manter toda leitura e interação sobre a folha única de acetato leitoso (`rgba(246, 244, 236, 0.95)`), separando zonas internas com fios secos de `1px` (`#C7C2B4`) e `1.5px` (`#181B1A`).",
+      "**Do** vincular a cor da prancha ativa (`--board-color`) simultaneamente ao fundo do palco, aos furos vazados de encadernação, aos discos marcados da bandeja e aos botões primários.",
+      "**Do** exibir código oficial (`POP.ENF.001`), setor e versão em `JetBrains Mono` tabular no topo de toda resposta ou folha assistencial, mantendo a tarja vermelhão (`#B92525`) visível sem rolagem na abertura desktop (`1440×900`).",
+      "**Do** preservar altura mínima de `44px` em todos os botões, itens de índice rápido, checklists de bandeja e campos de formulário, usando chaveamento seco de `90ms steps(2)` para estados interativos."
+    ],
+    "donts": [
+      "**Don't** introduzir bolhas de chat flutuantes, avatares de robô, fundos cinza/azul de SaaS genérico ou sombras externas em cartões, tabelas e botões dentro da folha.",
+      "**Don't** usar o vermelhão de biossegurança (`#B92525`) em abas de navegação, emblemas decorativos ou botões secundários fora de alertas críticos da CCIH e recusas seguras.",
+      "**Don't** aplicar a fonte serifada `Spectral` em controles de interface ou tabelas, nem remover a condensação `\"wdth\" 86` dos títulos e abas divisórias.",
+      "**Don't** criar cartões de KPI engaiolados com sombras no painel analítico; mantenha indicadores e rankings pautados diretamente sobre a folha como um livro de registro hospitalar."
+    ]
+  }
+}
