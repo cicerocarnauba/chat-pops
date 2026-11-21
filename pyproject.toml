@@ -1,0 +1,16 @@
+[project]
+name = "chat-pops"
+version = "1.0.0"
+description = "Copiloto B2E de Procedimentos Operacionais Padrão Hospitalares (HU-UFC / PET Saúde Digital)"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.32.0",
+    "pydantic>=2.9.0",
+    "google-genai>=3.2.0",
+    "python-multipart>=0.0.12",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
